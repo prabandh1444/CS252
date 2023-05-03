@@ -1,0 +1,4 @@
+default via 10.129.158.250 dev eno1 proto static metric 100 
+10.129.158.0/24 dev eno1 proto kernel scope link src 10.129.158.82 metric 100 
+169.254.0.0/16 dev eno1 scope link metric 1000 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 

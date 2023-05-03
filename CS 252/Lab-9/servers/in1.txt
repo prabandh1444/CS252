@@ -1,0 +1,141 @@
+*  the total income of everyone in the economy and the total expenditure on the economy’s output of goods and services. The
+reason that GDP can perform the trick of measuring both total income and totalexpenditure is that these two things are really the same.
+For an economy as a whole,income must equal expenditure
+* Gross domestic product (GDP) is the market value of all final goods and services produced within a country in a given period of time.
+Expenditure APPROACH
+*  GDP among various types of spending. To do this, GDP (which we denote as Y) is divided into four components: consumption (C),
+ investment (I), government purchases (G), and net exports (NX):
+        Y  =  C + I + G + NX.
+Personal consumption expenditures (C)
+• Durable goods :
+    Durable goods are products that are expected to last for an extended period,
+    typically more than three years, without wearing out or becoming obsolete
+• Nondurable goods:
+     Non-durable goods are products that are consumed or used up relatively quickly, typically within three years or less.
+        Examples of non-durable goods include food, cleaning supplies, and personal care products. 
+• Consumer expenditures for service:
+        doctor vists,entertainment etc...
+Gross private domestic investment (Ig)
+• All final purchases of Machinery, 
+equipment, and tools by business 
+enterprises.
+• All construction
+Changes in inventories (unsold goods)Money spent on R&D, for the creation of new work of art, music, writing, film …
+Gross investment is the total amount of investment in new capital goods, while depreciation is the amount of capital
+ that wears out or becomes obsolete over a given period of time.
+ **net investment = Gross investment - depreciation;**
+"stock of capital" refers to the total amount of physical assets that are used in the production of goods and services.
+ These assets include buildings, machinery, equipment, and other durable goods that are used to produce other goods and services. 
+ stock of capital increases or decreases based of the value of net investment.
+Government purchases (G)
+• Expenditures for goods and services
+• Expenditures for publicly owned capital
+        ex :  military equipment, public infrastructure, and government salaries
+• Excludes transfer payments
+    These are payments made by the government to individuals or businesses without receiving any goods or services in return. 
+    Examples of transfer payments include social security payments, welfare benefits, and unemployment compensation.
+Net exports (NX) = Exports - Imports
+• Exports
+• Spending on domestically produced goods by foreigners
+• Imports
+• Spending on foreign goods by domestic residents
+    GDP Income Approach:
+Compensation of employees:
+as wages and salaries by business and government to their employees. It also includes wage and salary supplements,in particular,
+payments by employers into social insurance and into a variety of private pension, health, and welfare funds for workers
+Rents :
+Rent consist of the income received by the households and businesses. The figure used in the national accounts is net rent—
+gross rental income minus depreciation of the rental property.
+that supply property resources. 
+Interest :
+Interest consists of the money paid by private businesses to the suppliers of loans used to purchase capital.
+Proprietor’s income :
+Proprietor’s income is the income earned by individuals who own and operate unincorporated businesses, such as soleproprietorships or
+ partnerships.
+Corporate profits
+• Corporate income taxes :
+    These taxes are levied on corporations’ profits. They flow to the government
+• Dividends
+    These are the part of after-tax profits that corporations choose to pay out, or distribute, to their stockholders
+• Undistributed corporate profits :
+    Any after-tax profits that are not distributed to shareholders are saved, or retained, by corporations to be invested later in new 
+    plans and equipment
+Taxes on production and imports:
+The account called taxes on production and imports includes general sales taxes, excise taxes, business property taxes,
+ license fees, and customs duties.
+
+Sum of all the above give u National Income(NI) :
+        To get GDP = NI - (foreign factor income) + (Consumption of fixed capital) + (Statistical discrepancy);
+            NDP = NI - (foreign factor income)  + (Statistical discrepancy);
+            PI = NI - (personal taxes)
+                                    XOXOXOXOXOXOXOXOXOXXOXOXOXOXOXOXOXOXOXXOXOXOXOXOXOXO
+
+Real versus Nominal GDP:
+Nominal GDP is the total value of all final goods and services produced in an economy during a given period, 
+    typically a year, calculated using the current market prices of those goods and services.
+Real GDP, on the other hand, is the total value of all final goods and services produced in an economy during a given period,
+    adjusted for changes in the prices of those goods and services over time. Real GDP is calculated by using a base year's prices
+    as a reference point to remove the effects of inflation from the current market prices.(ITS NOT AFFECTED BY CHANGE IN PRICES)
+
+    GDP-deflator = (Nominal GDP)/(Real GDP) * 100
+This measures the current level of prices compared to the base year.
+Inflation:
+• Economy’s overall price level is rising
+Inflation rate
+• Percentage change in some measure of the price level from one period to the next 
+
+Inflation rate
+• Percentage change in some measure of the price level from one period to the next
+
+Price index in given year = (price of market basket in specific year /price of same market basket in base year)× 100
+
+Real GDP = (Nominal GDP)/(price index)
+
+The consumer price index (CPI) is a measure of the overall cost of the goods and services bought by a typical consumer
+When the CPI rises, the typical family has to spend more dollars to maintain the same standard of living
+steps to calculate:
+1. The Bureau of Labor Statistics (BLS) identifies a market basket of goods and services the typical consumer buys.
+2. The BLS conducts monthly consumer surveys to set the weights for the prices of those goods and services
+3. Find the prices of each of the goods and services in the basket for each point in time
+4. Use the data on prices to calculate the cost of the basket of goods and services at different times
+    Price index in given year = (price of market basket in specific year /price of same market basket in base year)× 100
+5. The inflation rate is the percentage change in the price index from the preceding period
+
+Reasons for Ineffectiveness of CPI:
+
+Substitution Bias:
+• The basket does not change to reflect consumer reaction to changes in relative prices.The index overstates the increase in cost of 
+living by not considering consumer substitution
+Introduction of new goods:
+• The basket does not reflect the change in purchasing power brought on by the introduction of new products
+• Consumers need fewer dollars to maintain any given standard of living
+Unmeasured Quality Change :
+• If the quality of a good rises from one year to the next, the value of a dollar rises, even if the price of the good stays the same.
+(vice-versa)
+• The BLS tries to adjust the price for constant quality, but such differences are hard to measure
+
+The CPI overstates inflation by about 1 percentage point per year.
+
+Economists and policymakers monitor both the GDP deflator and the consumer price index to gauge how quickly prices are rising.
+
+GDP deflator measures changes in the overall price level of an economy, CPI reflects the price changes of a basket of goods and 
+services that are relevant to households
+
+## The consumer price index compares the price of a fixed basket of goods and services to the price of the basket in the base year
+## GDP deflator compares the price of currently produced goods and services to the price of the same goods and services in the base 
+year
+
+wholesale Price Index(WI):
+• It measures the changes in the prices of goods sold and traded in bulk by wholesalei.e., the prices paid by 
+businesses when they buy goods from manufacturers or suppliers.
+• WPI tracks inflation at the producer level and CPI captures changes in prices levels at the consumer level.
+Inflation is indicative of the decrease in the purchasing power of a unit of a country’s currency
+
+PI uses for correcting Economic variables:
+• Price indexes are used to correct for the effects of inflation when comparing dollar figures from different times
+        Amount in today’s dollars = Amount in year T’s dollars * (Price Index relative to year T)
+• Interest represents a payment in the future for a transfer of money in the past.
+    •The nominal interest rate is the interest rate usually reported and not corrected for inflation. It is the interest rate that 
+    a bank pays.
+    • The real interest rate is the interest rate that is corrected for the effects of inflation
+     ## Real interest rate = Nominal interest rate –Inflation ##

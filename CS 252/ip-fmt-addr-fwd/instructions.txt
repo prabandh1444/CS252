@@ -1,0 +1,42 @@
+**Objective:**
+1.	Get a high level overview of necessary commands that give insight into many network layer concepts: packet formats, addressing and forwarding
+
+**Reference Material:** Watch on BodhiTree
+1.	IP packet format
+2.	Addressing and Forwarding
+3.	Digging deeper into Network Layer (first video)
+
+**Requirements:**
+1.	Linux Command Terminal; ip
+2.	Wireshark
+
+**General Instructions:**
+1. For linux users, things are rather straightforward. If you don't have the required tools, just install via apt-get. 
+2. Windows Users: WSL should work with above tools once installed. But wireshark UI won't work. So, we recommend you to use tcpdump. "sudo tcpdump -i interface -w filename.pcap". Be sure to rename interface of your machine (e.g. eth0), this dumps the captured packets to the pcap file, name it appropriately. You can then access the files created within WSL via "File Explorer". Enter \\wsl$\Ubuntu in the address bar and then browse your WSL folder structure
+3. MAC Users: There is no ip command but you can use iproute2mac. Install via "brew install iproute2mac".
+
+
+**Exercise 1: IP addressing and forwarding**
+
+1.	Watch the part-1 of the video titled "Digging Deeper into the Network Layer". Some parts of this video cover some topics for future labs. In this lab, we will however look at Addressing/Forwarding.
+2.	Download the files associated with this lab by right clicking the "View Documents" button.
+3.	Play around with "ip addr" and "ip route" to understand the concept of IP prefixes and routing within a host.
+
+*Now attempt the quiz titled "Lab06 IP Addressing Forwarding".*
+
+**Exercise 2: IP fragmentation**
+
+We have studied about IP fragmentation. Let us see it in action. We will experiment with two cases: 
+1)	When no fragmentation occurs and 
+2)	When fragmentation occurs.
+
+**Guidance:**
+1.	Download all relevant files related to this lab by clicking on "View Document" at the bottom. Unzip/untar. 
+2.	"sendUDP.c" is a simple socket program (provided in the directory) that generates a single IP packet of a given size and sends it to the specified destination IP address. Compile the program and generate the executable via "gcc sendUDP.c -o sendUDP".
+3.	Run wireshark and while it is running, execute the code via "./sendUDP remote-host pkt-size".  Example "./sendUDP 10.129.5.6 300". This command send a packet of size 300 bytes to host 10.129.5.6.
+4.	Experiment with different packet sizes, but to avoid confusion, you may want to capture each run of sendUDP in a separate wireshark trace. Use filters based on "ip.addr" to identify the packets belonging to a given experiment.
+5.	On a machine where you have root access, you can also set the MTU artificially to a lower value using the "ip" command, e.g. "ip link set dev eno1 mtu 296". After setting this, experiment further with the sendUDP command (and wireshark), giving various packet size arguments.
+6.	It is strongly recommended that you do this experiment yourself and collect your own traces. We have however provided a single trace that corresponds to both the fragmentation/no-fragmentation cases (to make life a bit more interesting :-).
+7.	You should also know the significance of fragmentation fields (look at slides 11-16 of IP-protocol-slides.pdf on BodhiTree)
+
+*Now attempt the quiz titled "Lab06 IP Packet Format".*

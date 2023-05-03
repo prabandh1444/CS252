@@ -1,0 +1,69 @@
+**Objective:**
+1.	Get an overview of commands and tools to understand ARP and DHCP
+2.	Dig in deeper into the ARP and DHCP protocols
+
+**Reference Material:** Watch on BodhiTree
+1.	Digging deeper into Network Layer (both parts, from previous lab)
+2.	IP packet format
+3.	Addressing and Forwarding
+4.	ARP
+5.	DHCP
+
+
+**Requirements:**
+1.	Linux Command Terminal; ip, arp, arping, dhclient commands
+2.	Wireshark
+
+**General Instructions:**
+1. For linux users, things are rather straightforward. If you don't have the required tools, just install via apt-get. 
+2. Windows Users: WSL should work with above tools once installed. But wireshark UI won't work. So, we recommend you to use tcpdump. "sudo tcpdump -i interface -w filename.pcap". Be sure to rename interface of your machine (e.g. eth0), this dumps the captured packets to the pcap file, name it appropriately. You can then access the files created within WSL via "File Explorer". Enter \\wsl$\Ubuntu in the address bar and then browse your WSL folder structure
+3. MAC Users: There is no ip command but you can use iproute2mac. Install via "brew install iproute2mac". arping can also be installed using brew.
+
+
+**Exercise 1: An Overview**
+
+1.	Watch the two videos "Digging Deeper into the Network Layer" (part of previous lab). These videos explain many commands that span many concepts at the network layer. In this lab, we will however look at the ARP and DHCP protocols.
+2.	Download the files associated with this lab by right clicking the "View Documents" button.
+3.	Play around with the "ip neigh" command to view the kernel's ARP table. With root privileges (prepend sudo), you can also use "ip -s -s neigh flush all" to clear the kernel's ARP cache. Also recollect the earlier "ip addr" and "ip route" commands.
+4.	To generate traffic toward another machine, the easiest is to use the "ping" command, which uses the ICMP protocol. E.g. "ping 10.200.1.11".
+
+**Exercise 2:  Address Resolution Protocol (ARP) and Forwarding**
+
+You may recall that during packet forwarding at a host, in cases where the destination IP address belongs to the host's own subnet, the packet goes directly, otherwise it goes via a router. Let us check this out in practice via an experiment. While at it, let is also see what happens if you try to send a packet to "a non-existent host within the same subnet".
+Guidance:
+1.	As the name of the exercise suggests, this experiment is about exploring the ARP protocol in the context of forwarding. Normally to delete or set up ARP entries, you require root permissions but to view ARP entries, you don't need root permission. This lab can be done without root permissions, just by viewing the arp entries currently in the cache via "ip neigh".  
+2.	In all cases mentioned below, you do NOT want the arp entry of the target machine in the cache. So, ensure this is the case by choosing an appropriate target (IP address).
+3.	To generate packets directed towards a given target, you can use "ping".
+4.	When you are sending packets to a 'non-existent host within the same subnet', do wait for at least 10 sec before closing your packet capture tool. The underlying action in this case, takes time. And it is good if you use "-c" option of ping to restrict number of packets sent to just one (ping -c 1 ip-address-target).
+5.	Suppose you find out via "ip addr" that your address is 10.129.12.14/16. The terminology we use is as under.
+  1. "Within subnet" means any host that shares the same subnet as you i.e. hosts with IP address 10.129.*.*  You should pick one that is up and alive, you can do this by asking some neighbour in the lab for their IP address and ensuring it is not already in your ARP cache.
+  2. "Outside subnet" means any host that is outside, for example 10.159.14.5 (note the first two bytes are not 10.129). You can target the IP address of some well known machines like your web server, since these are often placed in some other subnets. But do check that it is not on your subnet. Again this target should not be in the ARP cache, wait if required for the ARP cache to clear (which may take a few minutes).
+  3. "Unreachable host within the same subnet" is a bit difficult to figure out. It will have an IP address belonging to this 10.129.*.*  say 10.129.126.240 but there is no machine configured with this specific address. You can ping a few machines and see which get no reply.
+  4. It is strongly recommended that you do this experiment yourself and collect your own traces. We have however provided 3 traces corresponding to the 3 cases above in case you have not been able to collect such traces.
+
+**Now attempt the first module of the quiz titled "Lab07-ARP".**
+
+
+**Exercise 3: Gratuitous ARP**
+Gratuitous ARPs have many uses. It can be used to detect duplicate IP address, for ARP spoofing where an intruder can generate a gratuitous ARP advertising his MAC address and someone else's IP address and thereby capture the some one's traffic. In this experiment, we will explore gratuitous ARPs.
+
+**Guidance:**
+
+1.	'arping' is a tool that generates gratuitous ARPs. Gratuitous ARPs can be sent as both ARP requests and ARP replies. Capture both types of packets via appropriate arguments.
+a)	arping -I wlp1s0 -A own-ip-address (Request)
+b)	arping -I wlp1s0 -U -P own-ip-address (Reply)
+(replace own-ip-address with your own machine's IP address)
+2.	IMPORTANT NOTE: DO NOT do any ARP spoofing attack. You should be CAREFUL to generate "legal" gratuitous ARPs where MAC address and IP address both will belong to your machine only (not someone else's).
+3.	It is strongly recommended that you do this experiment yourself and collect your own traces. We have however provided 2 traces corresponding to the Gratuitous ARP as request and reply, in case you have not been able to collect them.
+
+**Now attempt the second module of quiz titled "Lab07-ARP".**
+
+**Exercise 4: Dynamic Host Configuration Protocol (DHCP)**
+
+Configuring IP addresses requires root permission. Further most sysads in a computer lab would not want you to tinker with the IP addresses of the lab machines. You are most welcome to generate a DHCP trace on your laptop as outlined in the video corresponding to "Digging deeper into the Network Layer part-2" and explore it. 
+But for this exercise use the provided trace "dhcp.pcapng", which is the result of executing the below three commands in that order:
+1.	"dhclient -v wlo1"
+2.	"dhclient -v -r wlo1"
+3.	"dhclient -v wlo1"
+
+**Now attempt the quiz titled "Lab07-DHCP".**
